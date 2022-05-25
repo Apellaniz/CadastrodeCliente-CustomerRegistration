@@ -1,0 +1,71 @@
+p {
+    color: #000000;
+    font-family: Arial;
+}
+
+h1 {
+    color: #066a75;
+    font-size: 35px;
+    font-family: Arial;
+    text-align: center;
+}
+
+#txTsalario {
+    background-color: #cee1e4;
+    border: 0px;
+}
+
+label {
+    color: black;
+    margin-left: 15px;
+}
+
+input {
+    width: 90%;
+    height: 20pt;
+    margin-top: 5px;
+    margin-left: 15px;
+    border-radius: 5px;
+    border-color: rgb(221, 220, 220);
+}
+
+.Gravar {
+    color: #fff;
+    background-color: #4ab3c6;
+    height: 28pt;
+    margin-left: 15px;
+    border-radius: 5px;
+
+}
+
+.container {
+    border: 2px #066a75 solid;
+    border-radius: 10px;
+    border-color: #066a75;
+    width: 500px;
+    height: 650px;
+    margin: 0px auto;
+    position: relative;
+    background-color: rgb(247, 247, 247);
+}
+
+.form-select {
+    width: 88%;
+    height: 20pt;
+    margin-top: 5px;
+    margin-left: 15px;
+    border-radius: 5px;
+    border-color: rgb(221, 220, 220);
+}
+
+hr {
+    border: 0;
+    width: 88%;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #066a75, transparent);
+    margin-bottom: 25px;
+}
+
+::placeholder {
+    font-family: italic;
+}

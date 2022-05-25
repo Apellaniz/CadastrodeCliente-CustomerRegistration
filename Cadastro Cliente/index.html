@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css" />
+    <script src="public/js/script.js"></script>
+    <title>Cadastro de Funcionários!</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="post">
+            <h1>Cadastro de<br> Funcionário</h1>
+            <hr />
+            <p>
+                <label for="txNome">Seu Nome</label>
+                <input type="text" name="txNome" id="txNome" required="required" placeholder=" nome">
+            </p>
+            <p>
+                <label for="txEmail">Sua E-mail</label>
+                <input type="email" name="txEmail" id="txEmail" value="" required="required" placeholder=" contato@dominio">
+            </p>
+            <p>
+                <label for="txData">Sua Data de Nascimento</label>
+                <input type="date" name="txData" required="required" id="txData" max="2022-12-31" onclick="
+                    funcionario.validateAge(document.getElementById('txData').value);
+                    document.getElementById('txData').value = funcionario.validateAge();
+                ">  
+            </p>
+            <p>
+                <label for="txSalario">Seu Salario</label>
+                <input type="text" name="txSalario" required="required" id="txSalario" size="50">
+            </p>
+            <p>
+                <label for="txCargo">Seu Cargo</label>
+                <select class="form-select" name="txCargo" id="txCargo" required aria-label="Default select example" onchange="
+                    funcionario.calcSalary(document.getElementById('txCargo').value, document.getElementById('txSalario').value);
+                    document.getElementById('txCargo').value = funcionario.calcSalary();
+                ">
+                    <option value="">selecione...</option>
+                    <option id="1" value="1">Gerente</option>
+                    <option id="2" value="2">Analista de Sistemas</option>
+                    <option id="3" value="3">Desenvolvedor</option>
+                    <option id="4" value="4">DBA</option>
+                </select>
+            </p>
+            <p>
+                <label for="txTsalario">Total Salario</label>
+                <input type="text" disabled="disabled" readonly="true" name="txTsalario" id="txTsalario" size="50">
+            </p>
+            <p>
+                <input class="Gravar" type="button" value="Gravar" readonly="true" onclick="
+                    funcionario.toRecord(document.getElementById('txNome').value, document.getElementById('txData').value);
+                    document.getElementById('txTsalario').value = funcionario.toRecord();
+                    ">
+            </p>
+        </form>
+    </div>
+
+</body>
+
+</html>
